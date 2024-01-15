@@ -1,11 +1,21 @@
-<h1>New book</h1>
+<div class="main row justify-content-center">
 
-<%= form_with model: @user do |f| %>
-  <h4>Title</h4>
+  <div class="row">
+ 
+ <div class="col">
+ <h1>User info</h1>
+
+ <%= form_with model: @user do |f| %>
+  <h4>Name</h4>
   <%= f.text_field :name %>
 
-  <h4>Opinion</h4>
-  <%= f.text_area :introduction %>
+  <h4>Introduction</h4>
+  <%= f.text_area :introduction %> <br>
 
-  <%= f.submit 'Create Book' %> 
-<% end %>
+  <%= f.submit 'Update User' %> 
+  <% end %>
+ </div>
+ 
+  </div>
+
+</div>
