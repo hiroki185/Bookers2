@@ -1,27 +1,31 @@
+<div class="main row justify-content-center">
+  
+<div class="row row-cols-2">
+  
+<div class="cal">
+
 <h2>User info</h2>
 
 <table>
   <tbody>
     <tr>
       <th>name</th>
-      <th></th>
+      <th><%= @user.name %></th>
     </tr>
 
     <tr>
       <th>introduction</th>
-      <th></th>
+      <th><%= @user.introduction %></th>
     </tr>
   </tbody>
 </table>
 
-<div class="row">
-  <a>a</a>
-</div>
+<%= link_to "Edit", edit_user_path(@user.id) %>
 
 
-<h1>New book</h1>
+<h1 class="text-primary">New book</h1>
 
-<%= form_with model: @book do |f| %>
+<%= form_with model: @newbook do |f| %>
   <h4>Title</h4>
   <%= f.text_field :title %>
 
@@ -30,9 +34,9 @@
 
   <%= f.submit 'Create Book' %> <!--bookの詳細ページへ-->
 <% end %>
+</div>
 
-
-
+<div class="col">
 <h2>Books</h2>
 
   <table>
@@ -55,4 +59,10 @@
   </tbody>
 
 </table>
+
+</div>
+
+</div>
+
+</div>
 
