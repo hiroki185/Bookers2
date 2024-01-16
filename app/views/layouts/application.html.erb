@@ -20,23 +20,26 @@
 
 
       <li>
-                <%= link_to user_path(current_user), class: "nav-link text-light" do %>
-                <i class="fas fa-home"></i> Home
-                <% end %>
-              </li>
-      <li class="col"><%= link_to "Users", users_path %></li>
-      <li class="col"><%= link_to "Books", books_path %></li>
-      <li class="col"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <%= link_to user_path(current_user), class: "nav-link text-light" do %>
+      <i class="fas fa-home"></i> Home
+      <% end %>
+      </li>
+      <li class="nav-link text-light"><%= link_to "Users", users_path %></li>
+      <li class="nav-link text-light"><%= link_to "Books", books_path %></li>
+      <li class="nav-link text-light"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
 
 
     <% else %>
-    
-      <li class="col-8 h-25 d-inline-block">Bookers</li>
-      <li class="col"><%= link_to "Home", root_path %></li>
-      <li class="col"><%= link_to "About", homes_about_path %></li>
-      <li class="col"><%= link_to "Sign up", new_user_registration_path %></li>
-      <li class="col"><%= link_to "Log in", new_user_session_path %></li>
-    
+
+      <li>
+      <%= link_to root_path, class: "nav-link text-light" do %>
+      <i class="fas fa-home"></i> Home
+      <% end %>
+      </li>
+      <li class="nav-link text-light"><%= link_to "About", homes_about_path %></li>
+      <li class="nav-link text-light"><%= link_to "Sign up", new_user_registration_path %></li>
+      <li class="nav-link text-light"><%= link_to "Log in", new_user_session_path %></li>
+
     <% end %>
     </ul>
     </div>
