@@ -43,14 +43,19 @@
 
     <thead>
       <tr>
-       <th>name</th>
-       <th>Opinion</th>
+        <th></th>
+       <th></th>
+       <th></th>
       </tr>
     </thead>
 
 
   <tbody>
     <tr>
+      <td>
+        <%= image_tag @user.get_profile_image(80,80) %> <br>
+        <%= link_to @user.name, user_path(current_user.id) %>
+      </td>
       <td><%= @book.title %></td>
       <td><%= @book.body %></td>
       <td><%= link_to "Edit", edit_book_path(@book.id) %></td>

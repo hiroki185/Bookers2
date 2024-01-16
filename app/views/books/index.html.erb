@@ -4,7 +4,7 @@
 <div class="col-md-3">
 
 <h2>User info</h2>
-
+<%= image_tag @user.get_profile_image(100,100) %>
 <table>
   <tbody>
     <tr>
@@ -53,7 +53,7 @@
     <% @books.each do |book| %>
   <tbody>
     <tr>
-      <td></td>
+      <td><%= image_tag @user.get_profile_image(80,80) %></td>
       <td><span><%= link_to book.title, book_path(book.id) %></span></td>
       <td><span><%= book.body %></span></td>
     </tr>
