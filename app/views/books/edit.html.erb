@@ -16,6 +16,11 @@
   <%= f.submit 'Update User' %> <!--bookの詳細ページへ-->
 <% end %>
 
+<p><%= link_to "Show", book_path(@book.id) %>
+|
+<%= link_to "Back", books_path(@book.id) %>
+</p>
+
 </div>
 
   </div>

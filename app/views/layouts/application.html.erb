@@ -14,7 +14,7 @@
       <header class="bg-dark text-white">
     <% if user_signed_in? %>
 
-    <ul class="row py-3">
+    <ul class="row py-3 mx-5">
       <li class="col-8 h-25 d-inline-block">Bookers</li>
       <li class="col"><%= link_to "Home", user_path(current_user) %></li>
       <li class="col"><%= link_to "Users", users_path %></li>
@@ -23,7 +23,7 @@
     </ul>
 
     <% else %>
-    <ul class="row py-3">
+    <ul class="row py-3 mx-5">
       <li class="col-8 h-25 d-inline-block">Bookers</li>
       <li class="col"><%= link_to "Home", root_path %></li>
       <li class="col"><%= link_to "About", homes_about_path %></li>

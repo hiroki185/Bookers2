@@ -42,6 +42,7 @@
 
     <thead>
       <tr>
+        <th></th>
        <th>Title</th>
        <th>Opinion</th>
       </tr>
@@ -52,6 +53,7 @@
     <% @books.each do |book| %>
   <tbody>
     <tr>
+      <td></td>
       <td><span><%= link_to book.title, book_path(book.id) %></span></td>
       <td><span><%= book.body %></span></td>
     </tr>
