@@ -22,7 +22,7 @@
    <div class="field_with_errors">
   <label>Name</label>
   </div>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: "form-control name" %>
   </div>
 
  <div class="form-group">
@@ -36,12 +36,12 @@
   <div class="field_with_errors">
   <label>Introduction</label>
   </div>
-  <%= f.text_area :introduction %> <br>
+  <%= f.text_area :introduction, class: "form-control introduction" %> <br>
    </div>
    
   <div class="form-group">
-  <div class="field_with_errors btn btn-secondary">
-  <%= f.submit 'Update User' %>
+  <div class="field_with_errors">
+  <%= f.submit 'Update User', class: "btn btn-secondary" %>
   </div>
   </div>
   
